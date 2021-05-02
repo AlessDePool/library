@@ -5,8 +5,55 @@ const saveBook = document.querySelector('.saveBook')
 const checkBox = document.querySelector('.checkBox')
 const cardContainer = document.querySelector('.bookDisplay')
 
-let library = []
 
+if (localStorage.getItem('books') === null) {
+    library = [];
+  } else {
+    const booksFromStorage = JSON.parse(localStorage.getItem('books'));
+    library = booksFromStorage;
+  }
+
+  window.addEventListener('load', function(e){
+      library.forEach(book => {
+        let div = document.createElement('div')
+        div.classList.add('card')
+        cardContainer.appendChild(div) 
+        
+        let h1 = document.createElement('h1')
+        h1.textContent = book.title
+        h1.classList.add('cardTextTitle') 
+        div.appendChild(h1)
+        
+        let br1 = document.createElement('br') 
+        div.appendChild(br1)
+        
+        let h2 = document.createElement('h2')
+        h2.textContent = book.author
+        h2.classList.add('cardTextAuthor') 
+        div.appendChild(h2)
+        
+        let br2 = document.createElement('br') 
+        div.appendChild(br2)
+        
+        let h3 = document.createElement('h3')
+        h3.textContent = book.pages
+        h3.classList.add('cardTextPages') 
+        div.appendChild(h3)
+        
+        let br3 = document.createElement('br') 
+        div.appendChild(br3)
+        
+        let readCheck = document.createElement('div')
+        readCheck.classList.add('readCheck')
+        div.appendChild(readCheck)
+        
+        let checkText = document.createElement('p')
+        checkText.setAttribute('dir', 'rtl')
+        checkText.textContent = book.read
+        checkText.classList.add('checkText')
+        readCheck.appendChild(checkText)
+      })
+  })
 let libraryStr
 
 let read = 'Not read'
@@ -74,8 +121,7 @@ function createBook() {
 
 saveBook.addEventListener('click', function(e){
     createBook()
-    let libraryStr =  JSON.stringify(library)
-    localStorage.setItem("books", JSON.stringify(libraryStr))
+    localStorage.setItem("books", JSON.stringify(library))
     bookTitle.value = ''
     bookAuthor.value = ''
     bookPages.value = ''
