@@ -12,6 +12,7 @@ html {
 /* resets */
 
 body {
+    background-color: #272727;
     font-family: sans-serif;
 }
 
@@ -23,14 +24,19 @@ body {
 }
 
 .sideForm {
-    border: 1px blue solid;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 600px;
+    position: relative;
+    top: 49px;
+    left: 20px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
 }
 
 .bookDisplay {
-    border: 1px green solid;
     display: flex;
     flex-wrap: wrap;
 
@@ -39,16 +45,23 @@ body {
 .title {
     font-size: 70px;
     margin-bottom: 30px;
+    color: #ff00ea;
     position: relative;
-    right: 50px;
-    top: 7px;
+    top: 10px;
+    outline: 10px;
 }
 
 .input{
-    height: 30px;
+    height: 20px;
     width: 300px;
     margin: 30px;
     font-size: 21px;
+    border-radius: 0px;
+    background-color: #222222;
+    border: 0px;
+    color: white;
+    padding: 10px;
+    border-top: 1px #ff00ea solid;
 }
 
 .checkText {
@@ -187,5 +200,9 @@ body {
     top: 371px;
     left: 11px;
     color: red;
+}
+
+.bookTitle {
+    outline: 0px;
 }
 
