@@ -7,7 +7,7 @@ const cardContainer = document.querySelector('.bookDisplay')
 const titleCheck = document.querySelector('.titleCheck')
 const authorCheck = document.querySelector('.authorCheck')
 const pagesCheck = document.querySelector('.pagesCheck')
-
+checkBox.textContent = 'NO'
 
 if (localStorage.getItem('books') === null) {
     library = [];
@@ -93,9 +93,11 @@ let read = 'Not read'
 checkBox.addEventListener('click', function(e){
    checkBox.classList.toggle('checkBoxClicked')
     if (checkBox.classList.contains('checkBoxClicked')){
+        checkBox.textContent = 'YES'
         read = 'Read'
         console.log(read)
     } else if (!checkBox.classList.contains('checkBoxClicked')){
+        checkBox.textContent = 'NO'
         read = 'Not read'
         console.log(read)
     }
@@ -218,6 +220,14 @@ saveBook.addEventListener('click', function(e){
     bookAuthor.value = ''
     bookPages.value = ''
     }
+})
+
+saveBook.addEventListener("mouseover", function(e){
+    saveBook.classList.add('saveBookHover')
+})
+
+saveBook.addEventListener("mouseout", function(e){
+    saveBook.classList.remove('saveBookHover')
 })
 
 

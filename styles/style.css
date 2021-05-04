@@ -13,7 +13,8 @@ html {
 
 body {
     background-color: #272727;
-    font-family: sans-serif;
+    font-family: 'Bebas Neue';
+    
 }
 
 .container {
@@ -24,6 +25,7 @@ body {
 }
 
 .sideForm {
+    font-family: 'Bebas Neue';
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -62,6 +64,7 @@ body {
     color: white;
     padding: 10px;
     border-top: 1px #ff00ea solid;
+    font-family: 'roboto';
 }
 
 .checkText {
@@ -73,17 +76,21 @@ body {
     height: 230px;
     width: 250px;
     margin: 20px;
-    background-color: rgb(40, 109, 40);
     position:relative;
     left: 40px;
     border-radius: 20px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
+    border: 1px #ff00ea solid;
+    font-family: 'roboto';
+    color: rgb(224, 224, 224);
 }
 
 .cardTextPages {
     font-size: 23px;
     text-align: left;
     margin-left: 13px;
-    margin-top: 13px;
+    margin-top: 1px;
 }
 
 .cardTextTitle {
@@ -96,48 +103,68 @@ body {
 .author {
     font-size: 23px;
     text-align: left;
-    margin-top: 13px;
+    margin-top: 1px;
     margin-left: 13px;
     margin-right: 4px;
 }
 
 .checkBox {
-    height: 30px;
-    width: 30px;
-    background-color: rgb(255, 0, 0);
-    align-self: flex-start;
+    height: 40px;
+    width: 70px;
+    align-self: flex-end;
     position: relative;
-    left: 275px;
     cursor: pointer;
-    top: 6px;
+    top: 16px;
+    right: 26px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
+    border: 1px #ff00ea solid;
 }
 
-.checkBoxClicked {
-    height: 30px;
-    width: 30px;
-    background-color: rgb(2, 2, 2);
-    align-self: flex-start;
-    position: relative;
-    left: 275px;
-    cursor: pointer;
+.checkBoxClicked{
+    font-variant: normal;
 }
 
 .text {
     font-size: 20px;
-    align-self: flex-end;
+    align-self: flex-start;
     position: relative;
-    right: 50px;
-    bottom: 20px
+    left: 23px;
+    bottom: 20px;
+    color:rgba(255, 255, 255, 0.863);
 }
 
 .saveBook {
-    background-color: black;
-    color: blanchedalmond;
+    background-color: rgb(36, 36, 36);
+    color: rgb(121, 121, 121);
     font-size: 30px;
     padding: 15px;
     cursor: pointer;
     margin-top: 25px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
 }
+
+.saveBookHover{
+    padding: 16px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 10px #ff00ea;
+    box-shadow: 0 0 10px #ff00ea;
+    color: #ff00ea;
+    position: relative;
+    bottom: 3px;
+    font-size: 32px;
+}
+
+
 
 .saveBookClicked {
     background-color: rgb(0, 195, 255);
@@ -149,9 +176,8 @@ body {
 }
 
 .removeButton {
-    height: 25px;
-    width: 50px;
-    background-color: rgb(0, 149, 248);
+    height: 30px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,29 +185,36 @@ body {
     position: absolute;
     left: 30px;
     bottom: 10px;
+    border-radius: 14px;
+    border: 1px #ff00ea solid;
+    font-size: 13px;
+    cursor: pointer;
 }
 
 .readButton {
-    height: 25px;
-    width: 50px;
-    background-color: rgb(0, 149, 248);
+    height: 30px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     right: 30px;
     bottom: 10px;
-    color: white
+    color: white;
+    border-radius: 14px;
+    border: 1px #ff00ea solid;
+    font-size: 13px;
+    cursor: pointer;
 }
 
 .readButtonClicked{
-    background-color: red;
+    color: white;
 }
 
 .titleCheck {
     font-size: 18px;
     position: absolute;
-    top: 183px;
+    top: 198px;
     left: 11px;
     color: red;
 }
@@ -189,7 +222,7 @@ body {
 .authorCheck {
     font-size: 18px;
     position: absolute;
-    top: 279px;
+    top: 299px;
     left: 11px;
     color: red;
 }
@@ -197,12 +230,20 @@ body {
 .pagesCheck {
     font-size: 18px;
     position: absolute;
-    top: 371px;
+    top: 399px;
     left: 11px;
     color: red;
 }
 
 .bookTitle {
+    outline: 0px;
+}
+
+.bookAuthor{
+    outline: 0px;
+}
+
+.bookPages {
     outline: 0px;
 }
 
